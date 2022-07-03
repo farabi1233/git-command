@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5 mb-5">
+
+        <div class="main-content">
+
+
+            <div class="row">
+                <div class="col-md-8 offset-md-4">
+                    <a href="#gitconfig" class="btn btn-success js-scroll-trigger"
+                        style="width: 90px; padding-left: 10px; font-size: 18px;">Config</a>
+                    <a href="#gitbranch" class="btn btn-primary js-scroll-trigger"
+                        style="width: 90px; padding-left: 10px; font-size: 18px;">Branch</a>
+                    <a href="#gitlog" class="btn btn-warning js-scroll-trigger"
+                        style="width: 90px; padding-left: 10px; font-size: 18px;">Log</a>
+                    <a href="#gittag" class="btn btn-info  js-scroll-trigger"
+                        style="width: 90px; padding-left: 10px; font-size: 18px;">Tag</a>
+                    <a href="#bottom" class="btn btn-info  js-scroll-trigger"
+                        style="width: 90px; padding-left: 10px; font-size: 18px;">Bottom</a>
+                    <br>
+                </div>
+            </div>
+            <table class="table table-striped mt-5 mb-5" width="100%" id="gittable">
+                <thead>
+                    <tr class="text-center">
+                        <th width="10">Serial</th>
+                        <th width="35">Git Command</th>
+                        <th width="35%">Description</th>
+                        <th width="20%">Tags</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>git init</td>
+                        <td>Initialize git repository in a folder</td>
+                        <td>init,start git,open git</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="gitconfig">git status</td>
+                        <td>Information about changed/deleted files</td>
+                        <td>status,condition,changes,modify</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>git config username.name Jhon</td>
+                        <td>Config git user for the current git</td>
+                        <td>git, config, user,name</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>git config username.email jhon@gmail.com</td>
+                        <td>Config git email for the current git</td>
+                        <td>git, config, user,email</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>git config --global username.name Jhon</td>
+                        <td>Config git user for the current git globally in a machine</td>
+                        <td>setup,config, globally, user,name</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>git config --global username.email jd@gmail.com</td>
+                        <td>Config git email for the current git globally in a machine</td>
+                        <td>setup,config, globally, user,email</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td style="font-size: 13px;">git remote add origin https://github.com/farabi1233/news</td>
+                        <td>Config remote connection for uploading files and data to the repository(such as github,
+                            gitlab,
+                            bitbucket, sourceforge)</td>
+                        <td>setup,origin,remote,server,repo</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>git -v</td>
+                        <td>Current installed git version</td>
+                        <td>git,version,show</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>git add file.txt</td>
+                        <td>Add specific file for commit</td>
+                        <td>add, fixed, specific, custom file</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>git add &nbsp; .</td>
+                        <td>Add all changed file for commit</td>
+                        <td>add, all, every file, changed</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>git commit -m "commit message"</td>
+                        <td>Commit Changes with messages and information</td>
+                        <td>commit, change, -m</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td id="gitbranch">git branch</td>
+                        <td>See all local branch list</td>
+                        <td>branch, list, local</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td id="gitbranch">git branch -a</td>
+                        <td>See all local and remote branch</td>
+                        <td>branch,remote, list,all, local</td>
+                    </tr>
+                    <td>14</td>
+                    <td id="gitbranch">git branch -r</td>
+                    <td>See all remote branch list</td>
+                    <td>remote,all, list,branch</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td title="">git branch branch_name</td>
+                        <td>Create new branch locally</td>
+                        <td>branch, change, make, create</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>git checkout -b branch_name</td>
+                        <td>Create new branch and move to there</td>
+                        <td>create, move, branch, checkout</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td title="">
+                            git checkout -b branch_name <br>or<br>
+                            git push origin branch_name
+                        </td>
+                        <td>Create new branch locally and push it to origin</td>
+                        <td>branch, change, make, create</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td title="for migrating to any branch use git checkout branch_name">git checkout dev</td>
+                        <td title="here dev is a custom branch for example purpose">Migrate from any branch to dev</td>
+                        <td>create, move, branch, checkout</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td title="for migrating to any branch use git checkout branch_name">git branch -D branch_name
+                        </td>
+                        <td title="here dev is a custom branch for example purpose">Delete local branch</td>
+                        <td>delete, local, branch, repo</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td title="for migrating to any branch use git checkout branch_name">git push --delete origin
+                            branch_name
+                        </td>
+                        <td title="here dev is a custom branch for example purpose">Delete branch from remote</td>
+                        <td>delete, origin, branch, checkout</td>
+                    </tr>
+
+                    <tr>
+                        <td>21</td>
+                        <td title="">git push</td>
+                        <td>Push current changed commits to current branch where you are</td>
+                        <td>push, commit, master</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td title="">git push -u origin master</td>
+                        <td>Push current changed commits to master branch</td>
+                        <td>push, commit, change,master</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td title="">git push -u origin branch_name</td>
+                        <td>Push current changed commits to specific branch</td>
+                        <td>specific,fixpush,branch,commit, change,master</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td title="">git log</td>
+                        <td>show all commits with details</td>
+                        <td>git,log, change, commit,all</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td title="" id="gitlog">git log --oneline</td>
+                        <td>show all commits with summary</td>
+                        <td>log,change,commit,summary</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td title="">git rev-list --all</td>
+                        <td>show all commits with commit long id</td>
+                        <td>git,log, change, commit,all</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td title="">git rev-list --all --count</td>
+                        <td>Show number of commits</td>
+                        <td>count, number, how many, log</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td title="">git shortlog</td>
+                        <td>Show number of commits with summary</td>
+                        <td>log,number,commit,list</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td title="">git shortlog -s</td>
+                        <td>Show number of commits per user</td>
+                        <td>user,commit,change,log,list,count,number</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td id="gittag">git pull </td>
+                        <td>update local branch by fetching data from remote origin</td>
+                        <td>pull, update,remote ,origin</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>git tag </td>
+                        <td>Show all local tag list</td>
+                        <td>tag, list, all, tags</td>
+                    </tr>
+
+                    <tr>
+                        <td>32</td>
+                        <td>git ls-remote --tags origin</td>
+                        <td>Show all remote tag list</td>
+                        <td>tag, list,remote, origin, all, tags</td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>git tag tag_name</td>
+                        <td>Create a new tag locally</td>
+                        <td>tag, create, new, local</td>
+                    </tr>
+                    <tr id="push">
+                        <td>34</td>
+                        <td>git checkout tags/tagname</td>
+                        <td>Checkout to new tag</td>
+                        <td>tag, checkout, new,</td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>git tag tag_name -a<br>or<br>git push origin --tags</td>
+                        <td>Create a local tag and upload to origin</td>
+                        <td>origin, tag, remote</td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>git push --tags</td>
+                        <td>Push all tags to the remote</td>
+                        <td>push, tag, all, --tags</td>
+                    </tr>
+                    <tr id="push">
+                        <td>37</td>
+                        <td>git tag tag_name -a</td>
+                        <td>Create a new tag with nesscessary description</td>
+                        <td>-a, tag,create, make</td>
+                    </tr>
+
+                    <tr>
+                        <td>38</td>
+                        <td>git tag -d tag_name</td>
+                        <td>Delete local tag</td>
+                        <td>tag,delete,clear, local</td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td style="font-size: 13px;">git push origin :tagname<br>or<br>git push --delete origin tagname
+                            <br>or <br>
+                            git push origin :refs/tags/tagname</td>
+                        <td>Delete remote tag</td>
+                        <td>tag, delete, push, origin</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>git fetch --tags</td>
+                        <td>Fetch and update local tags from remote origin</td>
+                        <td>tag,fetch,remote,origin</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>git merge feature</td>
+                        <td>Merge master branch with feature sub brach</td>
+                        <td>master,rebase, feature,sub, child</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>git rebase feature</td>
+                        <td>Rebase feature branch with master branch</td>
+                        <td>rebase, feature, master, merge, change</td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>git push -u --all</td>
+                        <td>Push Branch on Remote </td>
+                        <td>push, branch, remote</td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>git reset</td>
+                        <td>Unstage All Added Before Commit Done</td>
+                        <td>stage, unstage, git, commit</td>
+                    </tr>
+
+                    <tr>
+                        <td>45</td>
+                        <td>git reset --hard HEAD</td>
+                        <td>Delete last commit and return to code</td>
+                        <td>code, last, commit, code</td>
+                    </tr>
+
+                    <tr>
+                        <td>46</td>
+                        <td>git reset --soft HEAD</td>
+                        <td>Delete commit and save changes</td>
+                        <td>code, last, commit, change</td>
+                    </tr>
+
+                    <tr id="bottom">
+                        <td>47</td>
+                        <td>git rm --cached filename</td>
+                        <td>Remove specific file from git cache</td>
+                        <td>cache, remove, git, fixed,file</td>
+                    </tr>
+
+                    <tr>
+                        <td>48</td>
+                        <td>git rm -r --cached .</td>
+                        <td>Remove all files from git cache</td>
+                        <td>cache,all,remove,files</td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
